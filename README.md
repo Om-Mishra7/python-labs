@@ -19,17 +19,29 @@
      @app.route('/')
      def home():
          return 'Hello, CodeDamn!'
+
+     # Check if the script is being run directly
+     if __name__ == "__main__":
+         # Run the Flask app on port 1337
+         app.run(host="0.0.0.0", port=1337)
      ```
 
    - Save the file.
 
+   - Install Flask and Requests using the following commands:
+
+     ```bash
+     pip install Flask
+     pip install requests
+     ```
+
    - Run the Flask app:
 
      ```bash
-     flask run
+     python3 app.py
      ```
 
-   - Access the app at the provided URL in the output. You should see the message "Hello, CodeDamn!" displayed in your browser.
+   - Access the app at the provided URL in the output. You should see the message "Hello, CodeDamn!" displayed in your browser. A browser preview will appear on the side.
 
 2. **Create a Route for API Request:**
 
@@ -62,6 +74,11 @@
              return f'Successful API request! Response: {response.text}'
          else:
              return f'Error making API request. Status Code: {response.status_code}'
+
+     # Check if the script is being run directly
+     if __name__ == "__main__":
+         # Run the Flask app on port 1337
+         app.run(host="0.0.0.0", port=1337)
      ```
 
    - Save the file.
@@ -69,12 +86,14 @@
    - Run the Flask app:
 
      ```bash
-     flask run
+     python3 app.py
      ```
 
-   - Access the API request route at the provided URL in the output (e.g., http://127.0.0.1:5000/api_request). You should see a message indicating the success or failure of the API request along with the response.
+   - Access the API request route at the provided URL in the output (e.g., http://127.0.0.1:1337/api_request). You should see a message indicating the success or failure of the API request along with the response.
 
 3. **Additional Notes:**
 
    - Ensure that the external API (`https://ather.api.projectrexa.dedyn.io`) is accessible and responds to GET requests.
    - Use the `requests` library to make HTTP requests to external APIs.
+
+   - **Note:** The condition `if __name__ == "__main__":` is used to check whether the Python script is being run directly or imported as a module. If the script is the main program, the app will be run; if it is imported as a module, the app will not run. This allows the script to be reusable as a module in other applications.
