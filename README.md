@@ -41,7 +41,7 @@
      python3 app.py
      ```
 
-   - Access the app at the provided URL in the output. You should see the message "Hello, CodeDamn!" displayed in your browser. A browser preview will appear on the side.
+   - Access the app at the provided URL in the browser preview window. You should see the message "Hello, CodeDamn!" displayed in your browser. A browser preview will appear on the side.
 
 2. **Create a Route for API Request:**
 
@@ -89,7 +89,7 @@
      python3 app.py
      ```
 
-   - Access the API request route at the provided URL in the output (e.g., http://127.0.0.1:1337/api_request). You should see a message indicating the success or failure of the API request along with the response.
+   - Access the API request route at the provided URL in the browser preview window. You should see a message indicating the success or failure of the API request along with the response.
 
 3. **Additional Notes:**
 
