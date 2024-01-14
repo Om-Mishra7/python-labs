@@ -23,7 +23,7 @@
      # Check if the script is being run directly
      if __name__ == "__main__":
          # Run the Flask app on port 1337
-         app.run(host="0.0.0.0", port=1337)
+         app.run(host="0.0.0.0", port=1337, debug=True)
      ```
 
    - Save the file.
@@ -78,7 +78,7 @@
      # Check if the script is being run directly
      if __name__ == "__main__":
          # Run the Flask app on port 1337
-         app.run(host="0.0.0.0", port=1337)
+         app.run(host="0.0.0.0", port=1337, debug=True)
      ```
 
    - Save the file.
