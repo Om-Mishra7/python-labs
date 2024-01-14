@@ -19,7 +19,7 @@ playground-view: terminal-editor-browser # Show terminal, editor, and browser pr
 
 # Run Button Configuration
 
-run-button: flask run --host=0.0.0.0 # Use Flask's development server and allow external browser connections
+run-button: python3 $$file
 
 # Browser Link Configuration
 
