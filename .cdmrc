@@ -1,22 +1,27 @@
-# .cdmrc for Flask Playground
+# .cdmrc for Flask Playground with OAuth
 
 # Terminals Configuration
+
 terminals:
-    [
-        'pip install Flask',          # Install Flask (if not already installed)
-        'export FLASK_APP=app.py',    # Set the Flask app file (replace app.py with your app file)
-        'export FLASK_ENV=development', # Set the environment to development
-        'flask run',                  # Run the Flask app
-    ]
+[
+'pip install -r requirements.txt', # Install dependencies from requirements file
+'export FLASK_APP=app.py', # Set the Flask app file (replace app.py with your app file)
+'export FLASK_ENV=development', # Set the environment to development
+'flask run', # Run the Flask app
+]
 
 # Default Files Configuration
-tabs: ['app.py']  # Open the main Flask app file by default
+
+tabs: ['app.py', 'requirements.txt'] # Open the main Flask app file and requirements file by default
 
 # Playground View Configuration
-playground-view: terminal-editor-browser  # Show terminal, editor, and browser preview
+
+playground-view: terminal-editor-browser # Show terminal, editor, and browser preview
 
 # Run Button Configuration
-run-button: flask run --host=0.0.0.0  # Use Flask's development server and allow external access
+
+run-button: flask run --host=0.0.0.0 # Use Flask's development server and allow external browser connections
 
 # Browser Link Configuration
-browser-link: http://localhost:5000  # Set the default Flask app URL
+
+browser-link: http://localhost:5000 # Set the default Flask app URL to be opened in the browser
