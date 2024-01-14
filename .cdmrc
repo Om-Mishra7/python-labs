@@ -1,2 +1,22 @@
-tabs: ['script.py']
-run-button: python3 $$file
+# .cdmrc for Flask Playground
+
+# Terminals Configuration
+terminals:
+    [
+        'pip install Flask',          # Install Flask (if not already installed)
+        'export FLASK_APP=app.py',    # Set the Flask app file (replace app.py with your app file)
+        'export FLASK_ENV=development', # Set the environment to development
+        'flask run',                  # Run the Flask app
+    ]
+
+# Default Files Configuration
+tabs: ['app.py']  # Open the main Flask app file by default
+
+# Playground View Configuration
+playground-view: terminal-editor-browser  # Show terminal, editor, and browser preview
+
+# Run Button Configuration
+run-button: flask run --host=0.0.0.0  # Use Flask's development server and allow external access
+
+# Browser Link Configuration
+browser-link: http://localhost:5000  # Set the default Flask app URL
