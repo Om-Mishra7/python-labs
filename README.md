@@ -187,11 +187,11 @@
           # URL of the GitHub OAuth Access Token endpoint (https://docs.github.com/en/developers/apps/building-oauth-apps/authorizing-oauth-apps#3-use-the-authorization-code-to-get-an-access-token), as you can see we are now sending a POST request to GitHub to get the access token from the authorization server (GitHub in this case), this is the third step in the OAuth flow where we are getting the access token from the authorization server (GitHub in this case) using the authorization code that we received in the callback URL in the previous step.
 
 
-          access_token_url = f"https://github.com/login/oauth/access_token?client_id={CLIENT_ID}&client_secret={CLIENT_SECRET}&code={CODE}"
+          access_token_url = f"https://github.com/login/oauth/access_token?client_id={CLIENT_ID}&client_secret={CLIENT_SECRET}&code={CODE}
 
           # Make a POST request to the GitHub OAuth Access Token endpoint to get the access token
 
-          response = requests.post(access_token_url)
+          response = requests.post(access_token_url, headers={'Accept': 'application/json'}) # Note: We are sending the Accept header with the value application/json to tell GitHub that we want the response in JSON format
 
           # Check if the request was successful (status code 200)
 
