@@ -7,7 +7,7 @@
 - Flask is a minimal Python web framework that allows you to create web applications quickly and easily.
 
   - Create a new file named `app.py`.
-  - Enter the following code to set up a basic Flask app:
+  - Enter the following boilerplate code to create a basic Flask app:
 
     ```python
     from flask import Flask
