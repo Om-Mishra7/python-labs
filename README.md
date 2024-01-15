@@ -158,7 +158,7 @@
 
    - Save the file.
 
-   - Run the Flask app, and access the `/authorize` route at the provided URL in the browser preview window. You should be redirected to GitHub to authorize the app, in case of any error, refer to the error message displayed in the browser the most common error is an invalid client id or redirect uri not matching the one specified in the GitHub OAuth app.
+   - Run the Flask app, and access the `/authorize` route at the provided URL in the browser preview window. Note not in the browser preview window, but in the browser itself. You should be redirected to GitHub to authorize the app, in case of any error, refer to the error message displayed in the browser the most common error is an invalid client id or redirect uri not matching the one specified in the GitHub OAuth app.
 
 5. **Create a Route for Handling the Callback:**
 
