@@ -132,7 +132,7 @@
 
    - Open the `app.py` file in the editor.
 
-   - First, we need to import the `redirect` function from the `flask` module and the `request` object from the `flask` module:
+   - First, we need to import the `redirect` function from the `flask` module:
 
      ```python
      from flask import Flask, redirect
